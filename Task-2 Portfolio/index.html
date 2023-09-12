@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ritesh's Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="image/portfolio.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper_1">
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#"><img src="image/logo.png" class="nav__logo img" alt="Ritesh Portfolio"></a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li>
+                            <a href="#home" class="nav__link">
+                                <i class="uil uil-estate"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user"></i> About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-edit-alt"></i> Skills
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="nav__link">
+                                <i class="uil uil-scenery"></i> Projects
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message"></i> Contact Me
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--  Theme Change  -->
+                <div class="nav__btns">
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                </div>
+            </nav>
+        </header>
+
+        <br>
+        <!--  Content  -->
+        <main class="main">
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/riteshgarg0605/" target="_blank"
+                                class="home__social-icon">
+                                <i class="uil uil-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/riteshgarg0605/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <img class="home__blob-img" src="image/profile-pic (1).png" />
+                        </div>
+
+                        <div class="home__data">
+                            <h2 class="home__subtitle">Hello, I'm </h2>
+                            <h1 class="home__title" style="font-weight: 700;">Ritesh Garg</h1>
+                            <h3 class="home__subtitle"><span class="typed-text"></span><span
+                                    class="cursor">&nbsp;</span>
+                            </h3>
+                            <!-- ============================== Typing Effect ========================== -->
+                            <script>
+                                const textArray = ["Coder", "Programmer", "Web Developer",]
+                                const typingDelay = 150
+                                const erasingDelay = 50
+                                const newTextDelay = 1000
+                                let textIndex = 0
+                                let charIndex = 0
+
+                                const typeTextSpan = document.querySelector(".typed-text");
+                                // const cursorSpan = document.querySelector(".cursor");
+
+                                function type() {
+                                    if (charIndex < textArray[textIndex].length) {
+                                        // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
+                                        typeTextSpan.textContent += textArray[textIndex].charAt(charIndex)
+                                        charIndex++
+                                        setTimeout(type, typingDelay)
+                                    }
+                                    else {
+                                        // cursorSpan.classList.remove("typing")
+                                        setTimeout(erase, newTextDelay)
+                                    }
+                                }
+
+                                function erase() {
+                                    if (charIndex > 0) {
+                                        // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
+                                        typeTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                                        charIndex--
+                                        setTimeout(erase, erasingDelay)
+                                    } else {
+                                        textIndex++
+                                        // cursorSpan.classList.remove("typing")
+                                        if (textIndex >= textArray.length) {
+                                            textIndex = 0
+                                        }
+                                        setTimeout(type, typingDelay)
+                                    }
+                                }
+
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    setTimeout(type, typingDelay + 1100)
+                                })
+                            </script>
+                            <p class="home__description">Currently a final year student pursuing
+                                B.Tech CSE from JEMTEC, Greater Noida. Have a passion for
+                                innovative
+                                technologies and problem solving.</p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me&nbsp;<i class="uil uil-message button__icon" style="display:contents;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name"> Scroll Down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+    <section class="about section" id="about" style="padding-top: 3.5rem;">
+        <h2 class="section__title">About Me</h2>
+        <span class="section__subtitle ">My Introduction</span>
+        <div class="about__container container grid">
+            <img src="image/illustration.png" alt="" class="about__img">
+            <div class="about__data">
+                <p class="about__description">Greetings! 👋 I'm Ritesh Garg, currently a final year student pursuing
+                    B.Tech CSE from JEMTEC, Greater Noida. A Highly motivated and
+                    enthusiastic web developer seeking an entry-level position to leverage my technical skills and
+                    creativity in designing and developing responsive and user-friendly websites. Committed to
+                    continuous learning and delivering high-quality code to contribute effectively to the success of the
+                    team and organization</p>
+                <div class="about__buttons">
+                    <a target="_blank"
+                        href="https://drive.google.com/file/d/1hqN2nr5j2wi_GE8C5z0KeW6csjKbRqUi/view?usp=drive_link"
+                        class="button button--flex">
+                        Download Resume <i class="uil uil-download-alt button__icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <span class="section__subtitle">My Technical Level</span>
+
+        <div class="skills__container container grid">
+            <div>
+
+                <!-- FRONTEND SKILLS -->
+
+                <div class="skills__content skills__open">
+                    <div class="skills__header">
+                        <i class="uil uil-brackets-curly skills__icon"></i>
+                        <div>
+                            <h1 class="skills__titles">Frontend Development</h1>
+                        </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">HTML</h3>
+                                <span class="skills__number">Intermediate</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__html"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">CSS</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__css"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">JavaScript</h3>
+                                <span class="skills__number">Intermediate</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__js"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">React Framework</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__react"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  BACKEND SKILLS  -->
+
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-server-network skills__icon"></i>
+                        <div>
+                            <h1 class="skills__titles">Backend Development</h1>
+                        </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">PHP</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__php"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Node JS</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__node"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">MySQL</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__sql"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Mongo DB</h3>
+                                <span class="skills__number">Basic</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__mongo"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Other Skills -->
+
+                <div class="skills__content skills__close">
+                    <div class="skills__header">
+                        <i class="uil uil-swatchbook skills__icon"></i>
+                        <div>
+                            <h1 class="skills__titles">Other Skills</h1>
+                        </div>
+                        <i class="uil uil-angle-down skills__arrow"></i>
+                    </div>
+
+                    <div class="skills__list grid">
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">Git</h3>
+                                <span class="skills__number">Intermediate</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__git"></span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__titles">
+                                <h3 class="skills__name">C++</h3>
+                                <span class="skills__number">Intermediate</span>
+                            </div>
+                            <div class="skills__bar">
+                                <span class="skills__percentage skills__cpp"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Education -->
+    <section class="qualification section">
+        <h2 class="section__title">Education</h2>
+        <span class="section__subtitle">My educational journey</span>
+
+
+        <!-- Education  -->
+        <div class="qualification__sections">
+            <div class="qualification__content qualification__active" data-content id="education">
+                <!-- Education 1 -->
+                <div class="qualification__data">
+                    <div style="margin-left: 4rem;">
+                        <h3 class="qualification__title">B.Tech CSE</h3>
+                        <span class="qualification__subtitle">JEMTEC(Aff. GGSIPU),<br>
+                            Greater Noida </span>
+                        <div class="qualification__calendar">
+                            <i class="uil uil-calender"></i>
+                            2020 - 2024
+                        </div>
+
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+                </div>
+
+                <!--  Education 2 -->
+                <div class="qualification__data">
+                    <div></div>
+
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <span class="qualification__line"></span>
+                    </div>
+
+                    <div style="display: flex;flex-direction: column; margin-left: 4rem;">
+                        <h3 class="qualification__title">Senior Secondary (XII)</h3>
+                        <span class="qualification__subtitle">Kalka Public School</span>
+                        <div class="qualification__calendar">
+                            <i class="uil uil-calender"></i>
+                            2019
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Education 3  -->
+                <div class="qualification__data">
+
+                    <div style="margin-left: 4rem;">
+                        <h3 class="qualification__title">Secondary (X)</h3>
+                        <span class="qualification__subtitle">
+                            St. George's School
+                        </span>
+                        <div class="qualification__calendar">
+                            <i class="uil uil-calender"></i>
+                            2017
+                        </div>
+
+                    </div>
+                    <div>
+                        <span class="qualification__rounder"></span>
+                        <!-- <span class="qualification__line"></span> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--  Projects  -->
+    <section class="porfolio section" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">Most recent work</span>
+
+        <div class="portfolio__container container">
+            <div>
+                <!--  Project 1  -->
+                <div class="portfolio__content grid ">
+                    <img src="image/project1.jpg" alt="" class="portfolio__img">
+
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Weather App</h3>
+                        <p class="portfolio__description">Website that displays weather of your current location or any
+                            other city that you search.</p>
+                        <div class="portfolio__btn__wrapper">
+                            <a href="https://ritesh-weather-app.netlify.app/"
+                                class="button button--flex button--small portfolio__button" target="_blank">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Project 2  -->
+                <div class="portfolio__content grid ">
+                    <img src="image/project2.jpg" alt="" class="portfolio__img">
+
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Password Generator</h3>
+                        <p class="portfolio__description">A website to generate strong passwords in a second without
+                            overthinking.
+                        </p>
+                        <div class="portfolio__btn__wrapper">
+                            <a href="https://ritesh-password-generator.netlify.app/" target="_blank"
+                                class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Project 3  -->
+                <div class="portfolio__content grid ">
+                    <img src="image/project3.jpg" alt="" class="portfolio__img">
+
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">My Gallery</h3>
+                        <p class="portfolio__description">A Gallery page that contains multiple grascale images, which
+                            shows their colors when mouse is hovered on them.</p>
+                        <div class="portfolio__btn__wrapper">
+                            <a href="https://ritesh-my-gallery.netlify.app" target="_blank"
+                                class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Project 4  -->
+                <div class="portfolio__content grid ">
+                    <img src="image/project4.jpg" alt="" class="portfolio__img">
+
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">AeroSound | Landing Page</h3>
+                        <p class="portfolio__description">Landing Page of a headphone company </p>
+                        <div class="portfolio__btn__wrapper">
+                            <a href="" class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  Project 5  -->
+                <div class="portfolio__content grid ">
+                    <img src="image/project5.jpg" alt="" class="portfolio__img">
+
+                    <div class="portfolio__data">
+                        <h3 class="portfolio__title">Parallax Website | Landing Page</h3>
+                        <p class="portfolio__description">Landing Page highlighting parallax effect and showcasing
+                            adventure sports </p>
+                        <div class="portfolio__btn__wrapper">
+                            <a href="https://ritesh-parallax-website.netlify.app" target="_blank"
+                                class="button button--flex button--small portfolio__button">
+                                Demo
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Contact Me == -->
+    <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle" style=" margin-bottom: 2rem;">Get in touch</span>
+
+        <div class="contact__container container grid">
+            <div>
+                <div class="contact__information">
+                    <i class="uil uil-linkedin-alt contact__icon"></i>
+
+                    <div>
+                        <h3 class="contact_title">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/riteshgarg0605" target="_blank"
+                            class="contact__subtitle">linkedin.com/in/riteshgarg0605</span>
+                    </div>
+                </div>
+
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
+
+                    <div>
+                        <h3 class="contact_title">Email</h3>
+                        <a href="mailto:riteshgarg0605@gmail.com" target="_blank"
+                            class="contact__subtitle">riteshgarg0605@gmail.com</>
+                    </div>
+                </div>
+
+                <div class="contact__information">
+                    <i class="uil uil-twitter-alt contact__icon"></i>
+
+                    <div>
+                        <h3 class="contact_title">Twitter</h3>
+                        <a href="https:www.twitter.com/riteshgarg0605" target="_blank"
+                            class="contact__subtitle">twitter.com/riteshgarg0605</a>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="contact__form grid">
+                <div class="contact__inputs grid">
+                    <div class="contact__content">
+                        <label class="contact__label">First Name</label>
+                        <input type="text" class="contact__input">
+                    </div>
+                    <div class="contact__content">
+                        <label class="contact__label">Last Name</label>
+                        <input type="text" class="contact__input">
+                    </div>
+                </div>
+                <div class="contact__content">
+                    <label class="contact__label">Email</label>
+                    <input type="email" class="contact__input">
+                </div>
+                <div class="contact__content">
+                    <label class="contact__label">Message</label>
+                    <textarea name="" id="" cols="0" rows="5" class="contact__input"></textarea>
+                </div>
+
+                <div>
+                    <button style="border: none;" type="submit" class="button button--flex">
+                        Send Message
+                        <i class="uil uil-message button__icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!--  Footer  -->
+    <footer class="footer footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">Ritesh Garg</h1>
+                <span class="footer__subtitle">Web Developer</span>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#home" class="footer__link">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="footer__link">About</a>
+
+                </li>
+                <li>
+                    <a href="#skills" class="footer__link">Skills</a>
+
+                </li>
+                <li>
+                    <a href="#projects" class="footer__link">Projects</a>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <br>
+        <p style="font-size: 13px;" class="footer__copy">Copyright &copy; 2023 Ritesh Garg. All rights reserved
+        </p>
+
+    </footer>
+    <!-- scroll top button -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <script src="index.js"></script>
+</body>
+
+</html>
