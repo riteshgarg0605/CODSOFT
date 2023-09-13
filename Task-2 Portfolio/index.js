@@ -1,23 +1,23 @@
-/*==================== MENU SHOW Y HIDDEN ====================*/ const navMenu =
-  document.getElementById("nav-menu");
+//  MENU SHOW Y HIDDEN
+const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
 
-/*===== MENU SHOW =====*/
+/* MENU SHOW */
 /* Validate if constant exists */
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
-/*===== MENU HIDDEN =====*/
+/* MENU HIDDEN */
 /* Validate if constant exists */
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
-/*==================== REMOVE MENU MOBILE ====================*/
+//  REMOVE MENU MOBILE
 const navLink = document.querySelectorAll(".nav__link");
 
 function linkaction() {
@@ -75,7 +75,7 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+//  SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
@@ -84,7 +84,7 @@ function scrollActive() {
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    const sectionID = current.getAttribute("id"); // Added "const" keyword
+    const sectionID = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
       // Use sectionID to target the correct navigation link
@@ -102,7 +102,7 @@ function scrollActive() {
 
 window.addEventListener("scroll", scrollActive);
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
+//  CHANGE BACKGROUND HEADER
 function scrollHeader() {
   const nav = document.getElementById("header");
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
@@ -111,7 +111,7 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
-/*==================== SHOW SCROLL UP ====================*/
+//  SHOW SCROLL UP
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
